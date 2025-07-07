@@ -15,29 +15,15 @@ html {
 }
 
 /* Navbar Section */
-.mynavbar {
-  backdrop-filter: blur(1px);
-}
-
-.container .navbar-toggler {
-  color: #fff;
-}
-
 .mynavbar .navbar-brand,
 .mynavbar .offcanvas-title {
   font-family: "Sacramento", cursive;
-  font-size: 2rem;
+  font-size: 3.2rem;
   font-weight: bold;
 }
 
 .mynavbar .offcanvas {
-  width: 100vw;
   height: 100vh;
-  left: 0;           /* Tambahkan ini supaya mulai dari kiri */
-  right: 0;          /* Pastikan tidak melebihi kanan */
-  top: 0;
-  bottom: 0;
-  max-width: 100%;   /* Pastikan tidak lebih dari 100% layar */
 }
 
 .mynavbar .nav-link {
@@ -210,7 +196,7 @@ html {
 }
 
 .parallax-tali.right {
-  right: -10px; 
+  right: -9px; 
 }
 
 /* Ukuran tali */
@@ -285,6 +271,7 @@ html {
 .parallax-lampu-2.left, .parallax-lampu-rencana.left, .parallax-lampu-pengesahan.left, .parallax-lampu-kepanitiaan.left {
   left: 20px;
    margin-top: 2rem;
+
 } 
 
 .parallax-lampu-2.right, .parallax-lampu-rencana.right, .parallax-lampu-pengesahan.right, .parallax-lampu-kepanitiaan.right {
@@ -452,7 +439,7 @@ footer img {
 }
 
 
-#loadingOverlay {
+/* #loadingOverlay {
   position: fixed;
   inset: 0;
   background: #000;
@@ -460,10 +447,10 @@ footer img {
   justify-content: center;
   align-items: center;
   z-index: 10000;
-}
+} */
 
 /* Tombol Mulai */
-#startButton {
+/* #startButton {
   padding: 1rem 2rem;
   font-size: 1.25rem;
   color: #fff;
@@ -471,42 +458,41 @@ footer img {
   border: none;
   border-radius: .5rem;
   cursor: pointer;
-}
+} */
 
 /* Konten disembunyikan sebelum memulai */
-#pageContent {
+/* #pageContent {
   visibility: hidden;
-}
+} */
 
-    #audio-container {
-  position: fixed;     /* tetap terlihat saat scroll */
-  bottom: 2rem;           /* pojok bawah viewport */
-  right: 2rem;            /* pojok kanan viewport */
-  width: auto;         /* menyesuaikan konten */
-  height: auto;
-  z-index: 1000;
-  pointer-events: none; /* supaya klik tetap “menembus” container jika ingin */
-}
-
-#audio-container {
-  position: fixed;     /* tetap terlihat saat scroll */
-  bottom: 1rem;           /* pojok bawah viewport */
-  right: 1rem;            /* pojok kanan viewport */
-  width: auto;
-  height: auto;
+    /* #audio-container {
+  position: fixed;     
+  bottom: 2rem;           
+  right: 2rem;           
+  width: auto;        
   z-index: 1000;
   pointer-events: none;
 }
 
-#audio-container .audio-icon-wrapper {
+#audio-container {
+  position: fixed;   
+  bottom: 1rem;       
+  right: 1rem;           
+  width: auto;
+  height: auto;
+  z-index: 1000;
+  pointer-events: none;
+} */
+
+/* #audio-container .audio-icon-wrapper {
   position: absolute;
   bottom: 0;
   right: 0;
   pointer-events: auto;
-}
+} */
 
 /* --- Ikon akan otomatis berputar --- */
-.audio-icon-wrapper {
+/* .audio-icon-wrapper {
   width: 4rem;
   height: 4rem;
   font-size: 4rem;
@@ -520,25 +506,117 @@ footer img {
   align-items: center;
   line-height: 0;
 
-  /* tambahkan animasi rotasi di sini */
   animation: rotating 4s linear infinite;
-}
+} */
 
 /* Keyframes untuk rotasi */
-@keyframes rotating {
-  from { transform: rotate(0deg); }
-  to   { transform: rotate(360deg); }
-}
-
+/* Tablet */
 @media (max-width: 768px) {
-  .offcanvas-body {
-    padding: 1.5rem 1rem;
+  html {
+    font-size: 65%;
+  }
+  .mynavbar .nav-link {
+    font-size: 1.5rem;
+    text-align: center;
+  }
+  .sticky-top {
+    overflow: hidden;
+  }
+
+  #pageContent {
+    width: 100%;
   }
 }
 
-@media (max-width: 480px) {
-  #startButton {
-    font-size: 1rem;
-    padding: 0.8rem 1.2rem;
+/* Phone */
+@media (min-width: 401px) and (max-width: 576px) {
+  html {
+    font-size: 65%;
+  }
+  .offcanvas {
+    max-width: 100% !important;
+    right: 0 !important;
+    left: 0 !important;
+    width: 100% !important;
+    margin-left: 0 !important;
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+    transform: translateX(0) !important;
+    -webkit-transform: translateX(0) !important;
+    z-index: 1050 !important;
+  }
+   #pageContent {
+    width: 100%;
+  }
+  .parallax-bunga, .parallax-atas {
+    width: 170px;
+  }
+  .parallax-bunga.right, .parallax-atas.right {
+    left: 70%;
+  }
+  .parallax-tali {
+    top: 17rem;
+     z-index: 4; 
+  }
+  .parallax-tali.right {
+    right: -3px;
+  }
+}
+
+/* Small Phone */
+@media (max-width: 400px) {
+html {
+    font-size: 60%;
+  }
+  .mynavbar .nav-link {
+    font-size: 1.5rem;
+    text-align: center;
+    padding: 0.75rem 1.5rem !important;
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+  }
+  .navbar-nav {
+    width: 100%;
+  }
+  .offcanvas {
+    max-width: 100% !important;
+    right: 0 !important;
+    left: 0 !important;
+    width: 100% !important;
+    margin-left: 0 !important;
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+    transform: translateX(0) !important;
+    -webkit-transform: translateX(0) !important;
+    z-index: 1050 !important;
+  }
+  .offcanvas-body {
+    right: 0;
+    max-width: auto;
+    padding: 0 !important;
+  }
+   #pageContent {
+    width: 100%;
+  }
+
+  .parallax-bunga, .parallax-atas {
+    width: 150px;
+  }
+  .parallax-bunga.right, .parallax-atas.right {
+    left: 62%;
+  }
+}
+
+/* Mobile S */
+@media (max-width: 320px) {
+  html {
+    font-size: 55%;
+  }
+
+  .parallax-bunga, .parallax-atas {
+    width: 100px;
+  }
+  .parallax-bunga.right, .parallax-atas.right {
+    left: 70%;
   }
 }

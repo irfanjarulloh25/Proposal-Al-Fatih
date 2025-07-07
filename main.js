@@ -113,22 +113,21 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 });
 
-document.addEventListener("DOMContentLoaded", () => {
-  const overlay   = document.getElementById('loadingOverlay');
-  const startBtn  = document.getElementById('startButton');
-  const content   = document.getElementById('pageContent');
-  const audio     = document.getElementById('backgroundMusic');
-  const iconWrap  = document.getElementById('audioIconWrapper');
+// document.addEventListener("DOMContentLoaded", () => {
+//   const overlay   = document.getElementById('loadingOverlay');
+//   const startBtn  = document.getElementById('startButton');
+//   const content   = document.getElementById('pageContent');
+//   const audio     = document.getElementById('backgroundMusic');
+//   const iconWrap  = document.getElementById('audioIconWrapper');
 
-  // Ketika tombol Mulai diklik:
-  startBtn.addEventListener('click', () => {
-    // Unmute & play audio (autoplay muted diizinkan)
-    audio.muted = false;
-    audio.play().catch(()=>{});
+  
+//   startBtn.addEventListener('click', () => {
+//     audio.muted = false;
+//     audio.play().catch(()=>{});
 
-    // Sembunyikan overlay dan tampilkan konten + ikon CD
-    overlay.style.display    = 'none';
-    content.style.visibility = 'visible';
-  });
 
-});
+//     overlay.style.display    = 'none';
+//     content.style.visibility = 'visible';
+//   });
+
+// });

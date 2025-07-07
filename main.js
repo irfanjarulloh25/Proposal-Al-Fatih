@@ -1,48 +1,14 @@
 const stickyTop = document.querySelector(".sticky-top");
-const offcanvas = document.querySelector(".offcanvas");
+      const offcanvas = document.querySelector(".offcanvas");
 
-offcanvas.addEventListener("show.bs.offcanvas", function () {
-  stickyTop.style.overflow = "initial"; 
-});
+      offcanvas.addEventListener("show.bs.offcanvas", function () {
+        stickyTop.style.overflow = "visible";
+      });
 
-offcanvas.addEventListener("hidden.bs.offcanvas", function () {
-  stickyTop.style.overflow = ""; 
-});
+      offcanvas.addEventListener("hidden.bs.offcanvas", function () {
+        stickyTop.style.overflow = "";
+      });
 
-// document.addEventListener("DOMContentLoaded", () => {
-//     const offcanvasElement = document.getElementById('offcanvasNavbar');
-//     const offcanvas = new bootstrap.Offcanvas(offcanvasElement);
-//     const navLinks = offcanvasElement.querySelectorAll('.nav-link');
-//     const navbarHeight = document.querySelector('.navbar').offsetHeight;
-
-//     navLinks.forEach(link => {
-//         link.addEventListener('click', (e) => {
-//             e.preventDefault();
-//             const targetId = link.getAttribute('href');
-//             const targetElement = document.querySelector(targetId);
-
-//             const scrollToTarget = () => {
-//                 if (targetElement) {
-//                     const elementPosition = targetElement.getBoundingClientRect().top + window.pageYOffset;
-//                     const offsetPosition = elementPosition - navbarHeight + 170;
-
-//                     window.scrollTo({
-//                         top: offsetPosition,
-//                         behavior: 'smooth'
-//                     });
-//                 }
-//             };
-
-//             // Tunggu sedikit setelah offcanvas tertutup, baru scroll
-//             offcanvasElement.addEventListener('hidden.bs.offcanvas', () => {
-//                 setTimeout(scrollToTarget, 50);  // delay kecil supaya smooth
-//             }, { once: true }); // pastikan hanya 1 kali jalan
-
-//             // Tutup offcanvas
-//             offcanvas.hide();
-//         });
-//     });
-// });
 
 document.addEventListener("DOMContentLoaded", () => {
     const offcanvasElement = document.getElementById('offcanvasNavbar');
@@ -113,21 +79,21 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 });
 
-// document.addEventListener("DOMContentLoaded", () => {
-//   const overlay   = document.getElementById('loadingOverlay');
-//   const startBtn  = document.getElementById('startButton');
-//   const content   = document.getElementById('pageContent');
-//   const audio     = document.getElementById('backgroundMusic');
-//   const iconWrap  = document.getElementById('audioIconWrapper');
+document.addEventListener("DOMContentLoaded", () => {
+  const overlay   = document.getElementById('loadingOverlay');
+  const startBtn  = document.getElementById('startButton');
+  const content   = document.getElementById('pageContent');
+  const audio     = document.getElementById('backgroundMusic');
+  const iconWrap  = document.getElementById('audioIconWrapper');
 
   
-//   startBtn.addEventListener('click', () => {
-//     audio.muted = false;
-//     audio.play().catch(()=>{});
+  startBtn.addEventListener('click', () => {
+    audio.muted = false;
+    audio.play().catch(()=>{});
 
 
-//     overlay.style.display    = 'none';
-//     content.style.visibility = 'visible';
-//   });
+    overlay.style.display    = 'none';
+    content.style.visibility = 'visible';
+  });
 
-// });
+});

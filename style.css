@@ -543,6 +543,11 @@ footer img {
   animation: rotating 4s linear infinite;
 }
 
+@keyframes rotating {
+  from { transform: rotate(0deg); }
+  to   { transform: rotate(360deg); }
+}
+
 /* Keyframes untuk rotasi */
 /* Tablet */
 @media (max-width: 768px) {
@@ -557,6 +562,10 @@ footer img {
   #pageContent {
     width: 100%;
     margin-top: 6rem;
+  }
+  #startButton {
+    font-size: 1rem;
+    padding: 0.8rem 1.2rem;
   }
 }
 
@@ -580,6 +589,10 @@ footer img {
    #pageContent {
     width: 100%;
     margin-top: 6rem;
+  }
+  #startButton {
+    font-size: 1rem;
+    padding: 0.8rem 1.2rem;
   }
   .parallax-bunga, .parallax-atas {
     width: 170px;
@@ -649,6 +662,10 @@ html {
    #pageContent {
     width: 100%;
     margin-top: 6rem;
+  }
+  #startButton {
+    font-size: 1rem;
+    padding: 0.8rem 1.2rem;
   }
 
   .parallax-bunga, .parallax-atas {

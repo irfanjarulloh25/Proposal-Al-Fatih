@@ -1,0 +1,478 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mt Al Fatih</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-SgOJa3DmI69IUzQ2PVdRZhwQ+dy64/BUtbMJw1MZ8t5HZApcHrRKUc4W0kG879m7"
+      crossorigin="anonymous"
+    />
+
+    <!-- Google Fonts Family -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Sacramento&family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Icon Pack Bootstrap  -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"
+    />
+
+    <!-- Link CSS -->
+    <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+    <!-- Sticky Navbar Start -->
+    <nav class="bg-transparent navbar navbar-expand-md sticky-top mynavbar">
+      <div class="container">
+        <a class="navbar-brand" href="#">MT AL Fatih</a>
+        <button
+          class="border-0 navbar-toggler"
+          type="button"
+          data-bs-toggle="offcanvas"
+          data-bs-target="#offcanvasNavbar"
+          aria-controls="offcanvasNavbar"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div
+          class="offcanvas offcanvas-end"
+          tabindex="-1"
+          id="offcanvasNavbar"
+          aria-labelledby="offcanvasNavbarLabel"
+        >
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="offcanvasNavbarLabel">
+              MT AL Fatih
+            </h5>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="offcanvas"
+              aria-label="Close"
+            ></button>
+          </div>
+          <div class="offcanvas-body">
+            <div class="navbar-nav ms-auto">
+              <a class="nav-link" href="#home">Home</a>
+              <a class="nav-link" href="#pendahuluan" data-offset="190">PENDAHULUAN</a>
+              <a class="nav-link" href="#tujuan" data-offset="280">TUJUAN</a>
+              <a class="nav-link" href="#rencana" data-offset="390">RENCANA</a>
+              <a class="nav-link" href="#dokumentasi" data-offset="480">DOKUMENTASI</a>
+              <a class="nav-link" href="#pengesahan" data-offset="580">PENGESAHAN</a>
+              <a class="nav-link" href="#anggaran" data-offset="670">ANGGARAN</a>
+              <a class="nav-link" href="#kepanitiaan" data-offset="770">KEPANITIAAN</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </nav>
+    <!-- Sticky Navbar End -->
+
+   <div id="loadingOverlay">
+    <button id="startButton">LIHAT</button>
+  </div>
+     <div id="pageContent">
+      <section id="home" class="home">
+          <div class="parallax-bunga left">
+            <img
+              src="./img/foto1kiri.PNG"
+              alt="Bunga Hiasan atas kiri"
+              class="img-fluid"
+            />
+          </div>
+          <div class="parallax-bunga right">
+            <img
+              src="./img/foto1kanan.PNG"
+              alt="Bunga Hiasan atas kanan"
+              class="img-fluid"
+            />
+          </div>
+          <div class="parallax-lampu left">
+            <img
+              src="./img/lampukiri.png"
+              alt="Bunga Hiasan atas kiri"
+              class="img-fluid"
+            />
+          </div>
+          <div class="parallax-lampu right">
+            <img
+              src="./img/lampukanan.PNG"
+              alt="Bunga Hiasan atas kanan"
+              class="img-fluid"
+            />
+          </div>
+          <div class="parallax-tali left">
+            <img
+              src="./img/talikiri.PNG"
+              alt="Bunga Hiasan atas kiri"
+              class="img-fluid"
+            />
+          </div>
+          <div class="parallax-tali right">
+            <img
+              src="./img/talikanan.PNG"
+              alt="Bunga Hiasan atas kanan"
+              class="img-fluid"
+            />
+          </div>
+          <div class="gambar-utama">
+            <img src="./img/cover.png" alt="Gambar Utama" class="img-fluid">
+          </div>
+          <!-- <div class="parallax-bintang tengah-1">
+            <img src="./img/bintang.PNG" alt="Bintang Hiasan Tengah 1" class="img-fluid" />
+          </div>
+          <div class="parallax-bintang tengah-2">
+            <img src="./img/bintang.PNG" alt="Bintang Hiasan Tengah 2" class="img-fluid" />
+          </div>
+          <div class="parallax-bintang tengah-3">
+            <img src="./img/bintang.PNG" alt="Bintang Hiasan Tengah 3" class="img-fluid" />
+          </div>
+          <div class="parallax-bintang tengah-4">
+            <img src="./img/bintang.PNG" alt="Bintang Hiasan Tengah 4" class="img-fluid" />
+          </div>
+          <div class="parallax-bintang tengah-5">
+            <img src="./img/bintang.PNG" alt="Bintang Hiasan Tengah 5" class="img-fluid" />
+          </div>
+          <div class="parallax-bintang tengah-6">
+            <img src="./img/bintang.PNG" alt="Bintang Hiasan Tengah 6" class="img-fluid" />
+          </div>
+          <div class="parallax-bintang tengah-7">
+            <img src="./img/bintang.PNG" alt="Bintang Hiasan Tengah 7" class="img-fluid" />
+          </div>
+          <div class="parallax-bintang tengah-8">
+            <img src="./img/bintang.PNG" alt="Bintang Hiasan Tengah 8" class="img-fluid" />
+          </div>
+          <div class="parallax-bintang tengah-9">
+            <img src="./img/bintang.PNG" alt="Bintang Hiasan Tengah 9" class="img-fluid" />
+          </div>
+          <div class="parallax-bintang tengah-10">
+            <img src="./img/bintang.PNG" alt="Bintang Hiasan Tengah 10" class="img-fluid" />
+          </div> -->
+
+      </section>
+
+      <section id="pendahuluan" class="pendahuluan">
+          <div class="parallax-atas left">
+            <img
+              src="./img/2kiri.PNG"
+              alt="Bunga Hiasan atas kiri"
+              class="img-fluid"
+            />
+          </div>
+          <div class="parallax-atas right">
+            <img
+              src="./img/2kanan.PNG"
+              alt="Bunga Hiasan atas kanan"
+              class="img-fluid"
+            />
+          </div>
+          <div class="parallax-lampu-2 left">
+            <img
+              src="./img/lampu1.PNG"
+              alt="Bunga Hiasan atas kiri"
+              class="img-fluid"
+            />
+          </div>
+          <div class="parallax-lampu-2 tengah">
+            <img
+              src="./img/lampu1.PNG"
+              alt="Bunga Hiasan atas kanan"
+              class="img-fluid"
+            />
+          </div>
+          <div class="parallax-lampu-2 tengah1">
+            <img
+              src="./img/lampu1.PNG"
+              alt="Bunga Hiasan atas kanan"
+              class="img-fluid"
+            />
+          </div>
+          <div class="parallax-lampu-2 tengah2">
+            <img
+              src="./img/lamputengah.PNG"
+              alt="Bunga Hiasan atas kanan"
+              class="img-fluid lampu-tengah"
+            />
+          </div>
+          <div class="parallax-lampu-2 right">
+            <img
+              src="./img/lampu1.PNG"
+              alt="Bunga Hiasan atas kanan"
+              class="img-fluid"
+            />
+          </div>
+          <div class="gambar-pendahuluan">
+            <img src="./img/pendahuluan.png" alt="Gambar Utama" class="img-fluid">
+          </div>
+      </section>
+
+      <section id="tujuan" class="tujuan">
+          <div class="parallax-lampu-atas-tujuan atas">
+            <img
+              src="./img/lampu3atas.PNG"
+              alt="Bunga Hiasan atas kiri"
+              class="img-fluid"
+            />
+          </div>
+          <div class="parallax-lampu-atas-tujuan tengah">
+            <img
+              src="./img/lamputengah.PNG"
+              alt="Bunga Hiasan atas kanan"
+              class="img-fluid"
+            />
+          </div>
+          <div class="gambar-tujuan">
+            <img src="./img/tujuan.png" alt="Gambar Utama" class="img-fluid">
+          </div>
+      </section>
+
+      <section id="rencana" class="rencana">
+          <div class="parallax-rencana left">
+            <img
+              src="./img/2kiri.PNG"
+              alt="Bunga Hiasan atas kiri"
+              class="img-fluid"
+            />
+          </div>
+          <div class="parallax-rencana right">
+            <img
+              src="./img/2kanan.PNG"
+              alt="Bunga Hiasan atas kanan"
+              class="img-fluid"
+            />
+          </div>
+          <div class="parallax-lampu-rencana left">
+            <img
+              src="./img/lampu1.PNG"
+              alt="Bunga Hiasan atas kiri"
+              class="img-fluid"
+            />
+          </div>
+          <div class="parallax-lampu-rencana tengah">
+            <img
+              src="./img/lampu1.PNG"
+              alt="Bunga Hiasan atas kanan"
+              class="img-fluid"
+            />
+          </div>
+          <div class="parallax-lampu-rencana tengah1">
+            <img
+              src="./img/lampu1.PNG"
+              alt="Bunga Hiasan atas kanan"
+              class="img-fluid"
+            />
+          </div>
+          <div class="parallax-lampu-rencana tengah2">
+            <img
+              src="./img/lamputengah.PNG"
+              alt="Bunga Hiasan atas kanan"
+              class="img-fluid lampu-tengah"
+            />
+          </div>
+          <div class="parallax-lampu-rencana right">
+            <img
+              src="./img/lampu1.PNG"
+              alt="Bunga Hiasan atas kanan"
+              class="img-fluid"
+            />
+          </div>
+          <div class="gambar-rencana">
+            <img src="./img/rencana.png" alt="Gambar Utama" class="img-fluid">
+          </div>
+      </section>
+
+      <section id="dokumentasi" class="dokumentasi">
+          <div class="parallax-lampu-atas-dokumentasi atas">
+            <img
+              src="./img/lampu3atas.PNG"
+              alt="Bunga Hiasan atas kiri"
+              class="img-fluid"
+            />
+          </div>
+          <div class="parallax-lampu-atas-dokumentasi tengah">
+            <img
+              src="./img/lamputengah.PNG"
+              alt="Bunga Hiasan atas kanan"
+              class="img-fluid"
+            />
+          </div>
+          <div class="gambar-dokumentasi">
+            <img src="./img/dokumentasi.png" alt="Gambar Utama" class="img-fluid">
+          </div>
+      </section>
+
+      <section id="pengesahan" class="pengesahan">
+          <div class="parallax-pengesahan left">
+            <img
+              src="./img/2kiri.PNG"
+              alt="Bunga Hiasan atas kiri"
+              class="img-fluid"
+            />
+          </div>
+          <div class="parallax-pengesahan right">
+            <img
+              src="./img/2kanan.PNG"
+              alt="Bunga Hiasan atas kanan"
+              class="img-fluid"
+            />
+          </div>
+          <div class="parallax-lampu-pengesahan left">
+            <img
+              src="./img/lampu1.PNG"
+              alt="Bunga Hiasan atas kiri"
+              class="img-fluid"
+            />
+          </div>
+          <div class="parallax-lampu-pengesahan tengah">
+            <img
+              src="./img/lampu1.PNG"
+              alt="Bunga Hiasan atas kanan"
+              class="img-fluid"
+            />
+          </div>
+          <div class="parallax-lampu-pengesahan tengah1">
+            <img
+              src="./img/lampu1.PNG"
+              alt="Bunga Hiasan atas kanan"
+              class="img-fluid"
+            />
+          </div>
+          <div class="parallax-lampu-pengesahan tengah2">
+            <img
+              src="./img/lamputengah.PNG"
+              alt="Bunga Hiasan atas kanan"
+              class="img-fluid lampu-tengah"
+            />
+          </div>
+          <div class="parallax-lampu-pengesahan right">
+            <img
+              src="./img/lampu1.PNG"
+              alt="Bunga Hiasan atas kanan"
+              class="img-fluid"
+            />
+          </div>
+          <div class="gambar-pengesahan">
+            <img src="./img/pengesahan.png" alt="Gambar Utama" class="img-fluid">
+          </div>
+      </section>
+
+      <section id="anggaran" class="anggaran">
+          <div class="parallax-lampu-atas-anggaran atas">
+            <img
+              src="./img/lampu3atas.PNG"
+              alt="Bunga Hiasan atas kiri"
+              class="img-fluid"
+            />
+          </div>
+          <div class="parallax-lampu-atas-anggaran tengah">
+            <img
+              src="./img/lamputengah.PNG"
+              alt="Bunga Hiasan atas kanan"
+              class="img-fluid"
+            />
+          </div>
+          <div class="gambar-anggaran">
+            <img src="./img/anggaran.png" alt="Gambar Utama" class="img-fluid">
+          </div>
+      </section>
+
+      <section id="kepanitiaan" class="kepanitiaan">
+          <div class="parallax-kepanitiaan left">
+            <img
+              src="./img/2kiri.PNG"
+              alt="Bunga Hiasan atas kiri"
+              class="img-fluid"
+            />
+          </div>
+          <div class="parallax-kepanitiaan right">
+            <img
+              src="./img/2kanan.PNG"
+              alt="Bunga Hiasan atas kanan"
+              class="img-fluid"
+            />
+          </div>
+          <div class="parallax-lampu-kepanitiaan left">
+            <img
+              src="./img/lampu1.PNG"
+              alt="Bunga Hiasan atas kiri"
+              class="img-fluid"
+            />
+          </div>
+          <div class="parallax-lampu-kepanitiaan tengah">
+            <img
+              src="./img/lampu1.PNG"
+              alt="Bunga Hiasan atas kanan"
+              class="img-fluid"
+            />
+          </div>
+          <div class="parallax-lampu-kepanitiaan tengah1">
+            <img
+              src="./img/lampu1.PNG"
+              alt="Bunga Hiasan atas kanan"
+              class="img-fluid"
+            />
+          </div>
+          <div class="parallax-lampu-kepanitiaan tengah2">
+            <img
+              src="./img/lamputengah.PNG"
+              alt="Bunga Hiasan atas kanan"
+              class="img-fluid lampu-tengah"
+            />
+          </div>
+          <div class="parallax-lampu-kepanitiaan right">
+            <img
+              src="./img/lampu1.PNG"
+              alt="Bunga Hiasan atas kanan"
+              class="img-fluid"
+            />
+          </div>
+          <div class="gambar-kepanitiaan">
+            <img src="./img/kepanitiaan.png" alt="Gambar Utama" class="img-fluid">
+          </div>
+      </section>
+
+      <section id="pengantar" class="pengantar">
+          <div class="parallax-lampu-atas-pengantar atas">
+            <img
+              src="./img/lampu3atas.PNG"
+              alt="Bunga Hiasan atas kiri"
+              class="img-fluid"
+            />
+          </div>
+          <div class="parallax-lampu-atas-pengantar tengah">
+            <img
+              src="./img/lamputengah.PNG"
+              alt="Bunga Hiasan atas kanan"
+              class="img-fluid"
+            />
+          </div>
+          <div class="gambar-pengantar">
+            <img src="./img/pengantar.png" alt="Gambar Utama" class="img-fluid">
+          </div>
+      </section>
+
+      <footer>
+        <img src="./img/bawah.PNG" alt="bawah">
+      </footer>
+    </div>
+
+     <div id="audio-container">
+      <audio id="backgroundMusic" src="./audio/videoplayback.m4a" loop muted autoplay></audio>
+      <div class="audio-icon-wrapper">
+        <i class="bi bi-disc" id="musicIcon"></i>
+      </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="main.js"></script>
+</body>
+</html>

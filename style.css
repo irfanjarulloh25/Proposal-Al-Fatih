@@ -1,0 +1,525 @@
+:root {
+  --hijau: #5bf44d;
+  --bg: #0a0a0a;
+  --shadow: 3px 3px 8px rgba(0, 0, 0, 0.48);
+}
+
+body {
+  font-size: 1.2rem;
+  font-family: "Work Sans", sans-serif;
+}
+
+html {
+  scroll-behavior: auto;
+}
+
+/* Navbar Section */
+.mynavbar {
+  backdrop-filter: blur(1px);
+}
+
+.container .navbar-toggler {
+  color: #fff;
+}
+
+.mynavbar .navbar-brand,
+.mynavbar .offcanvas-title {
+  font-family: "Sacramento", cursive;
+  font-size: 2rem;
+  font-weight: bold;
+}
+
+.mynavbar .offcanvas {
+  height: 100vh;
+  width: 100vw;
+}
+
+.mynavbar .nav-link {
+  text-transform: uppercase;
+}
+
+.mynavbar .navbar-nav a:hover {
+  font-weight: 600 !important;
+}
+
+
+.container .navbar-brand {
+  color: #fff;
+}
+
+.offcanvas-header h5 {
+  color: var(--hijau);
+}
+
+
+/* Base Styles */
+.animate-slide-in-left {
+  animation: slideInLeft 1.5s ease forwards;
+}
+
+/* Animasi dari kanan */
+.animate-slide-in-right {
+  animation: slideInRight 1.5s ease forwards;
+}
+
+/* Keyframes */
+@keyframes slideInLeft {
+  0% {
+    transform: translateX(-100px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@keyframes slideInRight {
+  0% {
+    transform: translateX(100px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+.animate-slide-in-top {
+  animation: slideInTop 1.5s ease forwards;
+}
+
+/* Keyframes: Masuk dari atas */
+@keyframes slideInTop {
+  0% {
+    transform: translateY(-100px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+/* home start */
+.home {
+  background-image: url(./img/background.png);
+  background-size: cover;
+  min-height: 130vh;
+  height: 110vh;
+  margin-top: -6rem;
+  padding-top: 15rem;
+  /* padding-bottom: 15rem; */
+  position: relative;
+  /* margin-bottom: 10rem; */
+}
+
+/* Bunga Kiri & Kanan */
+.parallax-bunga {
+  position: absolute;
+  width: 300px;
+  height: auto;
+  opacity: 0.8;
+  pointer-events: none;
+  margin-top: 5rem;
+}
+
+.parallax-bunga.left, .parallax-atas.left, .parallax-rencana.left, .parallax-pengesahan.left, .parallax-kepanitiaan.left {
+  top: 0;
+  left: 0;
+  transform: rotateY(180deg) scaleX(-1);
+  filter: drop-shadow(2px 4px 6px rgba(0, 0, 0, 0.2));
+  z-index: 5;
+}
+
+.parallax-bunga.right, .parallax-atas.right, .parallax-rencana.right, .parallax-pengesahan.right, .parallax-kepanitiaan.right {
+  top: 0;
+  right: 0;
+  left: 220px;
+  filter: drop-shadow(2px 4px 6px rgba(0, 0, 0, 0.2));
+  z-index: 5;
+}
+
+/* Animasi breathing */
+@keyframes breathing {
+  0%, 100% { transform: translateY(0) scale(1); }
+  50%      { transform: translateY(-10px) scale(1.05); }
+}
+
+.parallax-bunga.left img,
+.parallax-bunga.right img, .parallax-atas.left img, .parallax-atas.right img, .parallax-rencana.left img, .parallax-rencana.right img, .parallax-pengesahan.left img, .parallax-pengesahan.right img, .parallax-kepanitiaan.left img, .parallax-kepanitiaan.right img {
+  width: 170px;
+}
+
+.parallax-lampu {
+  position: absolute;
+  top: 7.5rem;
+  z-index: 15;
+  opacity: 0; 
+  transform: translateY(-100px);
+  transition: opacity 1s ease, transform 1.5s ease;
+  pointer-events: none;
+}
+
+/* Posisi kiri dan kanan */
+.parallax-lampu.left {
+  left: 16%;
+}
+
+.parallax-lampu.right {
+  right: 16%;
+}
+
+/* Ketika tampil */
+.parallax-lampu.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Kedap-kedip hanya pada gambar */
+.parallax-lampu img {
+  width: 130px;
+  height: auto;
+  animation: flicker 2s infinite alternate;
+}
+
+/* Animasi kedap-kedip */
+@keyframes flicker {
+  0% { opacity: 1; }
+  50% { opacity: 0.7; }
+  100% { opacity: 1; }
+}
+
+.parallax-tali {
+  position: absolute;
+  top: 10rem; 
+  z-index: 4; 
+  opacity: 1;
+  pointer-events: none;
+}
+
+/* Posisi kiri & kanan */
+.parallax-tali.left {
+  left: -10px; 
+}
+
+.parallax-tali.right {
+  right: -10px; 
+}
+
+/* Ukuran tali */
+.parallax-tali img {
+  height: 300px; 
+  width: auto;
+  animation: breathing 4s ease-in-out infinite;
+}
+
+.gambar-utama {
+  position: absolute;
+  top: 38%;
+  left: 50%;
+  transform: translate(-50%, -50%) translateY(-100px); 
+  opacity: 0;
+  transition: opacity 1s ease, transform 1.5s ease;
+  z-index: 10;
+  text-align: center;
+  width: 70%;
+  max-width: 400px;
+}
+
+/* Aktif saat terlihat */
+.gambar-utama.show {
+  transform: translate(-50%, -50%) translateY(0);
+  opacity: 1;
+}
+
+/* Gambar dalam .gambar-utama */
+.gambar-utama img {
+  width: 100%;
+  height: auto;
+  border-radius: 5%;
+  margin-top: 12rem;
+}
+
+/* pendahuluan */
+.pendahuluan{
+  background-image: url(./img/background.png);
+  background-size: cover;
+  margin-top: -6rem;
+  padding-top: 15rem;
+  min-height: 130vh;
+  height: 130vh;
+  position: relative;
+}
+
+
+.parallax-atas, .parallax-rencana, .parallax-pengesahan, .parallax-kepanitiaan  {
+  position: absolute;
+  width: 300px;
+  height: auto;
+  opacity: 0.8;
+  pointer-events: none;
+  margin-top: 4.5rem;;
+}
+
+.parallax-lampu-2, .parallax-lampu-rencana, .parallax-lampu-pengesahan, .parallax-lampu-kepanitiaan {
+  position: absolute;
+  top: 9.5rem;
+  z-index: 15; 
+  opacity: 0;
+  transform: translateY(-100px);
+  transition: opacity 1s ease, transform 1.5s ease;
+}
+
+.parallax-lampu-2.show, .parallax-lampu-rencana.show, .parallax-lampu-pengesahan.show, .parallax-lampu-kepanitiaan.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.parallax-lampu-2.left, .parallax-lampu-rencana.left, .parallax-lampu-pengesahan.left, .parallax-lampu-kepanitiaan.left {
+  left: 20px;
+   margin-top: 2rem;
+} 
+
+.parallax-lampu-2.right, .parallax-lampu-rencana.right, .parallax-lampu-pengesahan.right, .parallax-lampu-kepanitiaan.right {
+  right: 20px;
+  margin-top: 2rem;
+}
+
+.parallax-lampu-2.tengah, .parallax-lampu-rencana.tengah, .parallax-lampu-pengesahan.tengah, .parallax-lampu-kepanitiaan.tengah {
+  left: 5.7rem;
+  margin-top: 10px;
+}
+
+.parallax-lampu-2.tengah1, .parallax-lampu-rencana.tengah1,.parallax-lampu-pengesahan.tengah1, .parallax-lampu-kepanitiaan.tengah1 {
+  left: 17rem;
+  margin-top: 10px;
+}
+
+.parallax-lampu-2.tengah2, .parallax-lampu-rencana.tengah2, .parallax-lampu-pengesahan.tengah2, .parallax-lampu-kepanitiaan.tengah2 {
+  left: 9rem;
+  margin-top: -5rem;
+}
+
+.parallax-lampu-2 img, .parallax-lampu-rencana img, .parallax-lampu-pengesahan img, .parallax-lampu-kepanitiaan img {
+  width: 30px;
+  height: auto;
+  animation: flicker 2s infinite alternate;
+}
+
+.parallax-lampu-2 .lampu-tengah, .parallax-lampu-rencana .lampu-tengah, .parallax-lampu-pengesahan .lampu-tengah, .parallax-lampu-kepanitiaan .lampu-tengah{
+  width: 100px;
+  height: auto;
+  transition: opacity 1s ease, transform 1.5s ease;
+}
+
+
+.gambar-pendahuluan {
+  position: absolute;
+  top: 140px;
+  left: 60px;
+  z-index: 10;
+  text-align: center;
+  width: 70%;   
+  max-width: 400px; 
+  opacity: 0;
+  transform: translateY(-100px);
+  transition: opacity 1s ease, transform 1.5s ease;
+}
+
+.gambar-pendahuluan.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.gambar-pendahuluan img {
+  width: 100%;
+  height: auto;
+  border-radius: 5%;
+  margin-top: 8rem;
+}
+
+.tujuan, .rencana, .dokumentasi, .pengesahan, .anggaran, .kepanitiaan, .pengantar {
+  position: relative;
+  width: 100%;
+  min-height: 120vh;
+  height: 120vh; 
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-image: url(./img/background.png);
+  background-size: cover;
+  padding-bottom: 10rem;
+}
+
+.pengantar {
+  margin-bottom: 0;
+  min-height: 100vh;
+  height: 100vh; 
+}
+
+/* Lampu Atas Kiri */
+.parallax-lampu-atas-tujuan, .parallax-lampu-atas-dokumentasi, .parallax-lampu-atas-anggaran, .parallax-lampu-atas-pengantar {
+  position: absolute;
+  opacity: 0;
+  transform: translateY(-100px);
+  transition: opacity 1s ease, transform 1.5s ease;
+}
+
+.parallax-lampu-atas-tujuan.show, .parallax-lampu-atas-dokumentasi.show, .parallax-lampu-atas-anggaran.show, .parallax-lampu-atas-pengantar.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.parallax-lampu-atas-tujuan.atas, .parallax-lampu-atas-dokumentasi.atas, .parallax-lampu-atas-anggaran.atas, .parallax-lampu-atas-pengantar.atas {
+  top: 70px; 
+  left: 0;
+}
+.parallax-lampu-atas-tujuan.atas img, .parallax-lampu-atas-dokumentasi.atas img, .parallax-lampu-atas-anggaran.atas img, .parallax-lampu-atas-pengantar.atas {
+  width: 100%;
+  left: 0;
+  height: auto;
+  z-index: 5;
+  animation: flicker 2s infinite alternate;
+}
+
+.parallax-lampu-atas-tujuan.tengah, .parallax-lampu-atas-dokumentasi.tengah, .parallax-lampu-atas-anggaran.tengah, .parallax-lampu-atas-pengantar.tengah {
+  top: 100px; 
+}
+/* Lampu Atas Tengah */
+.parallax-lampu-atas-tujuan.tengah img, .parallax-lampu-atas-dokumentasi.tengah img, .parallax-lampu-atas-anggaran.tengah img, .parallax-lampu-atas-pengantar.tengah img {
+  width: 80px;
+  height: auto;
+  z-index: 5;
+  animation: flicker 2s infinite alternate;
+}
+
+.gambar-tujuan, .gambar-rencana, .gambar-dokumentasi, .gambar-pengesahan, .gambar-anggaran, .gambar-kepanitiaan, .gambar-pengantar {
+  position: absolute;
+  top: 55%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 10;
+  text-align: center;
+  width: 70%;
+  max-width: 400px;
+}
+
+.gambar-pengantar {
+  top: 59%;
+}
+
+.gambar-tujuan img, .gambar-rencana img, .gambar-dokumentasi img, .gambar-pengesahan img, .gambar-anggaran img, .gambar-kepanitiaan img, .gambar-pengantar img {
+  width: 100%;
+  height: auto;
+  border-radius: 5%;
+  opacity: 0;
+  transform: translateY(100px);
+  transition: opacity 1s ease, transform 1.5s ease;
+}
+
+/* Saat muncul */
+.gambar-tujuan.show img, .gambar-rencana.show img, .gambar-dokumentasi.show img, .gambar-pengesahan.show img, .gambar-anggaran.show img, .gambar-kepanitiaan.show img, .gambar-pengantar.show img {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+footer {
+  width: 100%;
+  background-image: url(./img/background.png);
+  padding: 2rem 0;
+  position: relative; 
+  z-index: 5;
+  height: 200px;
+  overflow: hidden; 
+}
+
+footer img {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%; 
+  height: auto;
+  max-height: 200px;
+  object-fit: cover;
+}
+
+
+#loadingOverlay {
+  position: fixed;
+  inset: 0;
+  background: #000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 10000;
+}
+
+/* Tombol Mulai */
+#startButton {
+  padding: 1rem 2rem;
+  font-size: 1.25rem;
+  color: #fff;
+  background: #5bf44d;
+  border: none;
+  border-radius: .5rem;
+  cursor: pointer;
+}
+
+/* Konten disembunyikan sebelum memulai */
+#pageContent {
+  visibility: hidden;
+}
+
+    #audio-container {
+  position: fixed;     /* tetap terlihat saat scroll */
+  bottom: 2rem;           /* pojok bawah viewport */
+  right: 2rem;            /* pojok kanan viewport */
+  width: auto;         /* menyesuaikan konten */
+  height: auto;
+  z-index: 1000;
+  pointer-events: none; /* supaya klik tetap “menembus” container jika ingin */
+}
+
+#audio-container {
+  position: fixed;     /* tetap terlihat saat scroll */
+  bottom: 1rem;           /* pojok bawah viewport */
+  right: 1rem;            /* pojok kanan viewport */
+  width: auto;
+  height: auto;
+  z-index: 1000;
+  pointer-events: none;
+}
+
+#audio-container .audio-icon-wrapper {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  pointer-events: auto;
+}
+
+/* --- Ikon akan otomatis berputar --- */
+.audio-icon-wrapper {
+  width: 4rem;
+  height: 4rem;
+  font-size: 4rem;
+  cursor: pointer;
+  color: white;
+  opacity: 0.5;
+  mix-blend-mode: difference;
+  transform-origin: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  line-height: 0;
+
+  /* tambahkan animasi rotasi di sini */
+  animation: rotating 4s linear infinite;
+}
+
+/* Keyframes untuk rotasi */
+@keyframes rotating {
+  from { transform: rotate(0deg); }
+  to   { transform: rotate(360deg); }
+}

@@ -7,6 +7,7 @@
 body {
   font-size: 1.2rem;
   font-family: "Work Sans", sans-serif;
+   overflow-x: hidden;
 }
 
 html {
@@ -30,8 +31,13 @@ html {
 }
 
 .mynavbar .offcanvas {
-  height: 100vh;
   width: 100vw;
+  height: 100vh;
+  left: 0;           /* Tambahkan ini supaya mulai dari kiri */
+  right: 0;          /* Pastikan tidak melebihi kanan */
+  top: 0;
+  bottom: 0;
+  max-width: 100%;   /* Pastikan tidak lebih dari 100% layar */
 }
 
 .mynavbar .nav-link {
@@ -522,4 +528,17 @@ footer img {
 @keyframes rotating {
   from { transform: rotate(0deg); }
   to   { transform: rotate(360deg); }
+}
+
+@media (max-width: 768px) {
+  .offcanvas-body {
+    padding: 1.5rem 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  #startButton {
+    font-size: 1rem;
+    padding: 0.8rem 1.2rem;
+  }
 }

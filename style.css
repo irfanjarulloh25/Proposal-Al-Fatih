@@ -502,7 +502,7 @@ footer img {
 #audio-container {
   position: fixed;     
   bottom: 2rem;           
-  right: 2rem;           
+  right: 3rem;           
   width: auto;        
   z-index: 1000;
   pointer-events: none;
@@ -597,8 +597,10 @@ footer img {
   .parallax-bunga, .parallax-atas {
     width: 170px;
   }
-  .parallax-bunga.right, .parallax-atas.right {
-    left: 56%;
+  .parallax-bunga.right, .parallax-atas.right, .parallax-rencana.right, .parallax-pengesahan.right, .parallax-kepanitiaan.right  {
+    /* left: 54%; */
+    right: 0;
+    left: auto;
   }
   .parallax-tali {
     top: 17rem;
@@ -624,6 +626,10 @@ footer img {
 
 #loadingOverlay {
   width: 100%;
+}
+#audio-container {     
+  bottom: 2rem;           
+  right: 2rem;     
 }
 }
 
@@ -668,19 +674,22 @@ html {
     padding: 0.8rem 1.2rem;
   }
 
-  .parallax-bunga, .parallax-atas {
+  .parallax-bunga, .parallax-atas, .parallax-rencana.right, .parallax-pengesahan.right, .parallax-kepanitiaan.right  {
     width: 150px;
   }
-  .parallax-bunga.right, .parallax-atas.right {
-    left: 60%;
+  .parallax-bunga.right, .parallax-atas.right, .parallax-rencana.right, .parallax-pengesahan.right, .parallax-kepanitiaan.right  {
+    /* left: 56%; */
+    right: 0;
+    left: auto;
   }
   .parallax-lampu-2.tengah1, .parallax-lampu-rencana.tengah1,.parallax-lampu-pengesahan.tengah1, .parallax-lampu-kepanitiaan.tengah1 {
-  left: 31.5rem;
+  left: auto;
+  right: 45px;
   margin-top: 4rem;
 }
 
 .parallax-lampu-2.tengah2, .parallax-lampu-rencana.tengah2, .parallax-lampu-pengesahan.tengah2, .parallax-lampu-kepanitiaan.tengah2 {
-  left: 15rem;
+  left: 35%;
 }
 
 .parallax-lampu-2.tengah, .parallax-lampu-rencana.tengah, .parallax-lampu-pengesahan.tengah, .parallax-lampu-kepanitiaan.tengah {
@@ -698,6 +707,10 @@ html {
   margin-top: 5rem;
 
 }
+#audio-container {     
+  bottom: 2rem;           
+  right: 2rem;     
+}
 }
 
 /* Mobile S */
@@ -709,8 +722,9 @@ html {
   .parallax-bunga, .parallax-atas {
     width: 100px;
   }
-  .parallax-bunga.right, .parallax-atas.right {
-    left: 65%;
+  .parallax-bunga.right, .parallax-atas.right, .parallax-rencana.right, .parallax-pengesahan.right, .parallax-kepanitiaan.right  {
+    right: 0;
+    left: auto;
   }
   .parallax-lampu-2.left, .parallax-lampu-rencana.left, .parallax-lampu-pengesahan.left, .parallax-lampu-kepanitiaan.left {
    margin-top: 5rem;

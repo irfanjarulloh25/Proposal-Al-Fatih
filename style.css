@@ -574,6 +574,16 @@ footer img {
   html {
     font-size: 65%;
   }
+  .mynavbar {
+    width: 98%;
+  }
+  .container .navbar-brand {
+  color: #fff !important;
+}
+.navbar-toggler {
+  border-color: #fff !important; 
+  color: #fff !important;  
+}
   .offcanvas {
     max-width: 100% !important;
     right: 0 !important;
@@ -638,6 +648,17 @@ footer img {
 html {
     font-size: 60%;
   }
+   .mynavbar {
+    width: 98%;
+  }
+  .container .navbar-brand {
+  color: #fff !important;
+}
+
+.navbar-toggler {
+  border-color: #fff !important; 
+  color: #fff !important;  
+}
   .mynavbar .nav-link {
     font-size: 1.5rem;
     text-align: center;
@@ -719,6 +740,13 @@ html {
     font-size: 55%;
   }
 
+   .mynavbar {
+    width: 98%;
+  }
+
+  .container .navbar-brand {
+  color: #fff;
+}
   .parallax-bunga, .parallax-atas {
     width: 100px;
   }
